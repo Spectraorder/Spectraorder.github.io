@@ -15,6 +15,7 @@ circleTails.forEach(function (circle, index){
     circle.x = 0;
     circle.y = 0;
     circle.style.backgroundColor = colors[index % colors.length];
+    circle.style.zIndex = -index;
 });
 
 window.addEventListener("mousemove", function(e){
