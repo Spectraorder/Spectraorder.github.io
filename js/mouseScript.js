@@ -30,8 +30,8 @@ function animateCircles() {
     let y = mousePos.y;
 
     circleTails.forEach(function (circle, index){
-        circle.style.left = x - 12 + "px";
-        circle.style.top = y - 12 + "px";
+        circle.style.left = x - 6 + "px";
+        circle.style.top = y - 6 + "px";
 
         circle.style.scale = (circleTails.length - index) / circleTails.length;
 
