@@ -22,6 +22,9 @@ circleTails.forEach(function (circle, index){
 window.addEventListener("mousemove", function(e){
     mousePos.x = e.clientX;
     mousePos.y = e.clientY;
+    circleTails.forEach(tail => {
+        tail.style.transform = 'translate(0%, 0%)';
+    });
 });
 
 function animateCircles() { 
