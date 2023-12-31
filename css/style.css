@@ -2,3 +2,10 @@ body.dark-mode {
     background-color: #1D1F2C; /* Adjust this to your desired dark background color */
     color: #fff; /* Adjust text color for dark mode if needed */
 }
+
+.mouseTail, .theme-switch {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+}
