@@ -1,5 +1,5 @@
   @import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900|Barlow:300,400,500,600,700,800,900&display=swap");
-  .about {
+  /* .about {
     position: fixed;
     z-index: 10;
     bottom: 10px;
@@ -116,7 +116,7 @@
   }
   .about:hover .social.linkedin .icon:hover {
     background-color: #0077b5;
-  }
+  } */
   h1, h2, h3, h4, h5, h6, p, ul, li, button, a, i, input, body {
     margin: 0;
     padding: 0;
@@ -136,7 +136,7 @@
     font-family: "Barlow", sans-serif;
     background: #695681;
   }
-  .logo {
+  /* .logo {
     position: fixed;
     z-index: 5;
     bottom: 10px;
@@ -167,8 +167,8 @@
     padding: 0 5%;
     box-sizing: border-box;
     z-index: 3;
-  }
-  nav .menu .website_name {
+  } */
+  /* nav .menu .website_name {
     color: #695681;
     font-weight: 600;
     font-size: 20px;
@@ -268,7 +268,7 @@
   }
   nav .menu .menu_icon:hover .icon:after {
     transform: translateY(10px);
-  }
+  } */
   .container {
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
