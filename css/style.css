@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 body.dark-mode {
     background-color: #1D1F2C;
     .text-to-toggle {
@@ -33,6 +42,16 @@ body.dark-mode {
         opacity: 1;
         transform: translate(-50%, 0%);
     }
+}
+
+.my-name {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 110%;
+    transform: translateX(-50%);
+    font-weight: 600;
+    font-size: 36px;
 }
 
 .my-photo {
