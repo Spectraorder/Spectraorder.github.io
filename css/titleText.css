@@ -27,6 +27,7 @@
 @media (max-width: 767px) { 
     .rotating-text {
         font-size: 32px;
+        text-align: unset;
     }
 }
 
