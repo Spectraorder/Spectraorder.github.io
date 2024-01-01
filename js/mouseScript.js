@@ -21,11 +21,15 @@ circleTails.forEach(function (circle, index){
 
 window.addEventListener("mousemove", function(e){
     mousePos.x = e.clientX;
-    mousePos.y = e.clientY;
+    mousePos.y = e.clientY + getScrollTop();
     circleTails.forEach(tail => {
         tail.style.transform = 'translate(0%, 0%)';
     });
 });
+
+function getScrollTop() {
+    return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+}
 
 function animateCircles() { 
 

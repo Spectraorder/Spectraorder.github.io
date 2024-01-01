@@ -16,7 +16,7 @@ body.dark-mode {
 
 .scroll-to-explore {
     font-family: 'Poppins', sans-serif;
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -42,4 +42,8 @@ body.dark-mode {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+}
+
+.scroll-space {
+    height: 2000px;
 }
