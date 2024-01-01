@@ -8,3 +8,10 @@
     left: 0;
     transform: translate(-100%, -100%);
 }
+
+/* Target screens up to 767px width for common mobile devices */
+@media (max-width: 767px) { 
+    .circleTail {
+        display: none;
+    }
+}

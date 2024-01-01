@@ -14,10 +14,40 @@
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */
+    animation: slide-in 1s ease-in-out;
 }
 
 @media (min-width: 1805px) {
     .rotating-text {
+        transform: translate(-60%, -50%);
+        animation: slide-in-large 1s ease-in-out;
+    }
+}
+
+@media (max-width: 767px) { 
+    .rotating-text {
+        font-size: 32px;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -30%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slide-in-large {
+    from {
+        opacity: 0;
+        transform: translate(-60%, -30%);
+    }
+    to {
+        opacity: 1;
         transform: translate(-60%, -50%);
     }
 }
