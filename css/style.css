@@ -1,16 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 body.dark-mode {
-    background-color: #1D1F2C; /* Adjust this to your desired dark background color */
-    /* color: #fff; */
+    background-color: #1D1F2C;
     .text-to-toggle {
-        color: #EAEAEA; /* Adjust text color for dark mode */
+        color: #EAEAEA;
     }
 }
 
-.mouseTail, .theme-switch {
+.mouseTail, .theme-switch, .rotating-text, .scroll-to-explore {
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */
+}
+
+.scroll-to-explore {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    animation: slide-in-scroll 2s ease-in-out;
+}
+
+@keyframes slide-in-scroll {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 10%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0%);
+    }
 }
 
 .my-photo {
