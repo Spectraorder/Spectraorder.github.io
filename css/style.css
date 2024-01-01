@@ -1,6 +1,9 @@
 body.dark-mode {
     background-color: #1D1F2C; /* Adjust this to your desired dark background color */
-    color: #fff; /* Adjust text color for dark mode if needed */
+    /* color: #fff; */
+    .text-to-toggle {
+        color: #EAEAEA; /* Adjust text color for dark mode */
+    }
 }
 
 .mouseTail, .theme-switch {
@@ -8,4 +11,13 @@ body.dark-mode {
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */
+}
+
+.my-photo {
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
