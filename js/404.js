@@ -33,4 +33,6 @@ window.addEventListener("mousemove", (e) => {
   mousePos.y = e.clientY;
 });
 
-requestAnimationFrame(updateAnimation);
+if(window.innerWidth>767){
+  requestAnimationFrame(updateAnimation);
+}
