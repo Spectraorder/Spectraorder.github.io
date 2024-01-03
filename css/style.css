@@ -47,11 +47,25 @@ body.dark-mode {
 .my-name {
     font-family: 'Poppins', sans-serif;
     position: absolute;
-    left: 50%;
+    left: 30%;
     top: 110%;
     transform: translateX(-50%);
     font-weight: 600;
-    font-size: 72px;
+    font-size: 32px;
+    white-space: nowrap;
+}
+
+@media (min-width: 1275px) {
+    .my-name {
+        font-size: 72px;
+    }
+}
+
+@media (max-width: 767px) {
+    .my-name {
+        left: 10%;
+        transform: translateX(0%)
+    }
 }
 
 .masked-first-text {
@@ -64,17 +78,14 @@ body.dark-mode {
 
 .first-text, .second-text {
     display: inline-block;
-    /* transition: transform 0.3s ease-in-out; */
 }
 
 .first-text {
     transform: translateY(100%);
-    /* animation: slide-up 1s ease-in-out forwards; */
 }
   
 .second-text {
     transform: translateY(-100%);
-    /* animation: slide-down 1s ease-in-out forwards; */
 }
 
 .my-name.animate .first-text {
