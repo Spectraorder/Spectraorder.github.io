@@ -16,7 +16,7 @@
 @media (min-width: 1805px) {
     .rotating-text {
         transform: translate(-60%, -50%);
-        animation: slide-in-large 1s ease-in-out;
+        animation: slide-in-large 2s ease-in-out;
     }
 }
 

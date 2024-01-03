@@ -16,7 +16,7 @@ body.dark-mode {
     }
 }
 
-.mouseTail, .theme-switch, .rotating-text, .scroll-to-explore {
+.mouseTail, .theme-switch, .rotating-text, .scroll-to-explore, .my-name {
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
@@ -51,7 +51,56 @@ body.dark-mode {
     top: 110%;
     transform: translateX(-50%);
     font-weight: 600;
-    font-size: 36px;
+    font-size: 72px;
+}
+
+.masked-first-text {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.masked-second-text {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.first-text, .second-text {
+    display: inline-block;
+    /* transition: transform 0.3s ease-in-out; */
+}
+
+.first-text {
+    transform: translateY(100%);
+    /* animation: slide-up 1s ease-in-out forwards; */
+}
+  
+.second-text {
+    transform: translateY(-100%);
+    /* animation: slide-down 1s ease-in-out forwards; */
+}
+
+.my-name.animate .first-text {
+    animation: slide-up 1s ease-in-out forwards;
+}
+  
+.my-name.animate .second-text {
+    animation: slide-down 1s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
 }
 
 .my-photo {
@@ -64,5 +113,5 @@ body.dark-mode {
 }
 
 .scroll-space {
-    height: 2000px;
+    height: 20000px;
 }
