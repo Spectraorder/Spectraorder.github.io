@@ -78,6 +78,18 @@
     transform: rotateX(-90deg);
 }
 
+@keyframes slide-up-right {
+    0% {
+        transform: translateY(100%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateX(62%);
+    }
+}
+
 .alizarin {
     color: #e74c3c;
 }
