@@ -48,7 +48,7 @@ body.dark-mode {
     font-family: 'Poppins', sans-serif;
     position: absolute;
     left: 30%;
-    top: 110%;
+    top: 105%;
     transform: translateX(-50%);
     font-weight: 600;
     font-size: 32px;
@@ -115,6 +115,20 @@ body.dark-mode {
     to {
         transform: translateY(0%);
     }
+}
+
+.line-container {
+    position: absolute;
+    top: 110%;
+    left: 0%;
+    width: 100%;
+    z-index: -5;
+    overflow: hidden;
+}
+
+svg {
+    display: inline-block;
+    transform: translateX(-250px);
 }
 
 .my-photo {
