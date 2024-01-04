@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 body {
+    background-color: #f0f1fa;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -12,7 +13,7 @@ body::-webkit-scrollbar {
 body.dark-mode {
     background-color: #1D1F2C;
     .text-to-toggle {
-        color: #EAEAEA;
+        color: #f0f1fa;
     }
 }
 
