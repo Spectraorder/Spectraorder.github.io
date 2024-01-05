@@ -6,9 +6,13 @@ path.style.strokeDashoffset = pathLength;
 
 window.addEventListener('scroll', () =>{
     // var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-    const scrollPercentage = easeInOutQuad((window.scrollY - 300) / 1800);
-    var drawLength = pathLength * scrollPercentage;
-    path.style.strokeDashoffset = drawLength - pathLength;
+    const ratio = (window.scrollY - 200) / 1800;
+    if(ratio<=1){
+        const scrollPercentage = easeInOutQuad(ratio);
+        var drawLength = pathLength * scrollPercentage;
+        path.style.strokeDashoffset = drawLength - pathLength;
+    }
+    
 })
 
 function easeInOutQuad(t) {

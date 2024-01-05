@@ -15,20 +15,21 @@ function handleScroll() {
 
 window.addEventListener('scroll', handleScroll);
 
-
-window.addEventListener('scroll', () =>{
-    const scrollLine  = document.querySelectorAll(".parallax");
-    var index = 0, length = scrollLine.length;
-    for(index; index<length;index++){
-        var pos = window.pageYOffset * scrollLine[index].dataset.rate;
-
-        if(scrollLine[index].dataset.direction === 'vertical'){
-            scrollLine[index].style.transform = 'translate3d(0px, '+pos+'px, 0px)';
+if(window.innerWidth>767){
+    window.addEventListener('scroll', () =>{
+        const scrollLine  = document.querySelectorAll(".parallax");
+        var index = 0, length = scrollLine.length;
+        for(index; index<length;index++){
+            var pos = window.pageYOffset * scrollLine[index].dataset.rate;
+    
+            if(scrollLine[index].dataset.direction === 'vertical'){
+                scrollLine[index].style.transform = 'translate3d(0px, '+pos+'px, 0px)';
+            }
+            else{
+                var posX = window.pageYOffset * scrollLine[index].dataset.ratex;
+                var posY = window.pageYOffset * scrollLine[index].dataset.ratey;
+                scrollLine[index].style.transform = 'translate3d('+posX+'px, '+posY+'px, 0px)';
+            }
         }
-        else{
-            var posX = window.pageYOffset * scrollLine[index].dataset.ratex;
-            var posY = window.pageYOffset * scrollLine[index].dataset.ratey;
-            scrollLine[index].style.transform = 'translate3d('+posX+'px, '+posY+'px, 0px)';
-        }
-    }
-})
+    })
+}
