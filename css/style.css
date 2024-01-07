@@ -133,7 +133,7 @@ body.dark-mode {
     overflow: hidden;
 }
 
-svg {
+.line-container svg {
     display: inline-block;
     transform: translateX(-250px);
 }
