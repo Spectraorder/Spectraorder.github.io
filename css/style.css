@@ -17,7 +17,7 @@ body.dark-mode {
     }
 }
 
-.mouseTail, .theme-switch, .rotating-text, .scroll-to-explore, .my-name {
+.mouseTail, .theme-switch, .rotating-text, .scroll-to-explore, .my-name, .line-container, .photo-container, .my-description {
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
@@ -154,7 +154,51 @@ body.dark-mode {
 @media (max-width: 767px) {
     .photo-container {
         left: 50%;
+        top: 125%;
         transform: translateX(-50%);
+    }
+}
+
+.my-description {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    right: 10%;
+    top: 150%;
+    transform: translateY(-50%);
+    width: 30%;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.my-description .keyword {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.my-description .keyword-sec {
+    color: #3498db;
+    font-weight: bold;
+}
+
+@media (min-width: 1275px) {
+    .my-description {
+        right: 8%;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1275px) {
+    .my-description {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .my-description {
+        top: 150%;
+        right: 50%;
+        width: 60%;
+        transform: translateX(50%);
     }
 }
 
