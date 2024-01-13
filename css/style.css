@@ -202,6 +202,15 @@ body.dark-mode {
     }
 }
 
+@media (max-height: 834px) {
+    .photo-container {
+        top: 130%;
+    }
+    .my-description {
+        top: 165%;
+    }
+}
+
 .scroll-space {
     height: 20000px;
 }
