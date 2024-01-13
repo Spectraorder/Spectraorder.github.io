@@ -67,6 +67,15 @@
     .tooltip-container-github {
         top: 150%;
     }
+    .tooltip-container-linked .tooltip, .tooltip-container-gmail .tooltip, .tooltip-container-github .tooltip {
+        display: none;
+    }
+    .tooltip-container-linked .icon .text, .tooltip-container-gmail .icon .text, .tooltip-container-github .icon .text {
+        display: none;
+    }
+    .tooltip-container-linked .icon:hover .layer, .tooltip-container-gmail .icon:hover .layer, .tooltip-container-github .icon:hover .layer {
+        transform: none;
+    }
 }
 
 @media (max-height: 834px) {
