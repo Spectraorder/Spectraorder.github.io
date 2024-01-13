@@ -1,0 +1,79 @@
+@media (min-width: 1275px) {
+    .my-name {
+        font-size: 72px;
+    }
+    .photo-container img {
+        width: 350px;
+    }
+    .my-description {
+        right: 8%;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1275px) {
+    .my-description {
+        font-size: 20px;
+    }
+    .tooltip-container-linked, .tooltip-container-gmail, .tooltip-container-github {
+        scale: 1;
+    }
+}
+
+@media (max-width: 990px) {
+    .tooltip-container-linked, .tooltip-container-gmail, .tooltip-container-github {
+        scale: 1;
+    }
+    .tooltip-container-linked {
+        left: 40%;
+    }
+    .tooltip-container-github {
+        left: 15%;
+    }
+}
+
+@media (max-width: 767px) {
+    .my-name {
+        left: 50%;
+        transform: translateX(-50%)
+    }
+    .my-name.animate .first-text,
+    .my-name.animate .second-text {
+        animation: none !important;
+        transform: translateY(0);
+    }
+    .photo-container {
+        left: 50%;
+        top: 125%;
+        transform: translateX(-50%);
+    }
+    .my-description {
+        top: 150%;
+        right: 50%;
+        width: 60%;
+        transform: translateX(50%);
+    }
+    .tooltip-container-linked, .tooltip-container-gmail, .tooltip-container-github {
+        scale: 1;
+        left: unset;
+        right: 7%
+    }
+    .tooltip-container-linked {
+        top: 130%;
+    }
+    .tooltip-container-gmail {
+        top: 140%;
+    }
+    .tooltip-container-github {
+        top: 150%;
+    }
+}
+
+@media (max-height: 834px) {
+    .photo-container {
+        top: 130%;
+    }
+    .my-description {
+        top: 165%;
+    }
+}
