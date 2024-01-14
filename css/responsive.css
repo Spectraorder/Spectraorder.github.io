@@ -86,3 +86,21 @@
         top: 165%;
     }
 }
+
+@media (max-height: 600px) and (max-width: 767px) {
+    .photo-container {
+        top: 160%;
+    }
+    .my-description {
+        top: 240%;
+    }
+    .tooltip-container-linked {
+        top: 130%;
+    }
+    .tooltip-container-gmail {
+        top: 160%;
+    }
+    .tooltip-container-github {
+        top: 190%;
+    }
+}

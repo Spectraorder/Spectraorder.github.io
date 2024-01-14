@@ -19,7 +19,7 @@ if(window.innerWidth>767){
     window.addEventListener('scroll', () =>{
         const scrollLine  = document.querySelectorAll(".parallax");
         var index = 0, length = scrollLine.length;
-        for(index; index<length;index++){
+        for(index;index<length;index++){
             var pos = window.pageYOffset * scrollLine[index].dataset.rate;
     
             if(scrollLine[index].dataset.direction === 'vertical'){
