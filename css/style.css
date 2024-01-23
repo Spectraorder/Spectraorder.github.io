@@ -151,6 +151,11 @@ body.dark-mode {
     font-weight: bold;
 }
 
+.webgl {
+    position: absolute;
+    /* top: 200%; */
+}
+
 .scroll-space {
     height: 20000px;
 }
