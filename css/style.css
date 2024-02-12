@@ -159,3 +159,30 @@ body.dark-mode {
 .scroll-space {
     height: 20000px;
 }
+
+.alarm {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+    animation: fadeOut 5s ease forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+}
