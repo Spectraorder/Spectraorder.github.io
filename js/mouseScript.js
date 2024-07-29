@@ -1,56 +1,47 @@
+const mouseCircleElement = document.querySelector('.mouseCircle');
+
 const mousePos = {x:0, y:0};
-const circleTails = document.querySelectorAll(".circleTail");
+const mousePrevPos = {x:0, y:0};
+const circlePos = {x:0, y:0};
+let currentScale = 0;
+let currentAngle = 0;
 
-const colors = [
-    "#2c00cc", 
-    "#6002d3", 
-    "#9603db", 
-    "#cf05e2", 
-    "#e907c7", 
-    "#f00997", 
-    "#f80b65", 
-    "#ff0d31"
-]
-circleTails.forEach(function (circle, index){
-    circle.x = 0;
-    circle.y = 0;
-    circle.style.backgroundColor = colors[index % colors.length];
-    // bug: if circle has higher zindex, all buttons wont be responsive
-    circle.style.zIndex = -index;
+window.addEventListener('mousemove', (e) => {
+    mousePos.x = e.x;
+    mousePos.y = e.y;
 });
 
-window.addEventListener("mousemove", function(e){
-    mousePos.x = e.clientX;
-    mousePos.y = e.clientY + getScrollTop();
-    circleTails.forEach(tail => {
-        tail.style.transform = 'translate(0%, 0%)';
-    });
-});
+const speed = 0.17
 
-function getScrollTop() {
-    return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+const tick = () => {
+    circlePos.x += (mousePos.x - circlePos.x) * speed;
+    circlePos.y += (mousePos.y - circlePos.y) * speed;
+
+    const translateTransform = `translate(${circlePos.x}px, ${circlePos.y}px)`;
+
+    const deltaMouseX = mousePos.x - mousePrevPos.x;
+    const deltaMouseY = mousePos.y - mousePrevPos.y;
+    mousePrevPos.x = mousePos.x;
+    mousePrevPos.y = mousePos.y;
+
+    const mouseVelocity = Math.min(Math.sqrt(deltaMouseX**2 + deltaMouseY**2) * 4, 150);
+    const scaleValue = mouseVelocity / 300;
+
+    currentScale += (scaleValue - currentScale) * speed;
+
+    const scaleTransform = `scale(${1 + currentScale}, ${1 - currentScale})`;
+
+    const angle = Math.atan2(deltaMouseY, deltaMouseX) * 180 / Math.PI;
+
+    if (mouseVelocity > 20) {
+        currentAngle = angle
+    }
+
+    const rotateTransform = `rotate(${currentAngle}deg)`;
+
+    mouseCircleElement.style.transform = `${translateTransform} ${rotateTransform} ${scaleTransform}`;
+
+    window.requestAnimationFrame(tick);
 }
 
-function animateCircles() { 
-
-    let x = mousePos.x;
-    let y = mousePos.y;
-
-    circleTails.forEach(function (circle, index){
-        circle.style.left = x - 6 + "px";
-        circle.style.top = y - 6 + "px";
-
-        circle.style.scale = (circleTails.length - index) / circleTails.length;
-
-        circle.x = x;
-        circle.y = y;
-
-        const nextCircle = circleTails[index+1] || circleTails[0];
-        x += (nextCircle.x - x) * 0.8;
-        y += (nextCircle.y - y) * 0.8;
-    });
-
-    requestAnimationFrame(animateCircles);
-}
-
-animateCircles();
+tick();

@@ -1,17 +1,13 @@
-.circleTail {
-    height: 12px;
-    width: 12px;
-    border-radius: 12px;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-100%, -100%);
-}
-
-/* Target screens up to 767px width for common mobile devices */
-@media (max-width: 767px) { 
-    .circleTail {
-        display: none;
-    }
+.mouseCircle {
+    --circle-size: 40px;
+    position: fixed;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border:  1px solid black;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: calc(var(--circle-size) / 2 * -1);
+    left: calc(var(--circle-size) / 2 * -1);
+    pointer-events: none;
+    z-index: 5;
 }
