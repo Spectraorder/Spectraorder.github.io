@@ -39,12 +39,12 @@
     border: 1px solid #1da1f2;
 }
 
-.tooltip-container-linked:hover .tooltip {
+/* .tooltip-container-linked:hover .tooltip {
     top: -150px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-}
+} */
 
 .tooltip-container-linked .icon {
     text-decoration: none;
@@ -202,12 +202,12 @@
     border: 1px solid #EA4335;
 }
 
-.tooltip-container-gmail:hover .tooltip {
+/* .tooltip-container-gmail:hover .tooltip {
     top: -150px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-}
+} */
 
 .tooltip-container-gmail .icon {
     text-decoration: none;
@@ -357,12 +357,12 @@
     border: 1px solid #f0f1fa;
 }
 
-.tooltip-container-github:hover .tooltip {
+/* .tooltip-container-github:hover .tooltip {
     top: -150px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-}
+} */
 
 .tooltip-container-github .icon {
     text-decoration: none;

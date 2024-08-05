@@ -20,7 +20,7 @@ body.dark-mode {
     }
 }
 
-.mouseTail, .theme-switch, .rotating-text, .scroll-to-explore, .my-name, .line-container, .photo-container, .my-description, .overlay-toggle{
+.mouseTail, .website-content, .top-nav, .menu-sidebar{
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
@@ -172,6 +172,7 @@ body.dark-mode {
     padding: 10px;
     z-index: 1000;
     animation: fadeOut 5s ease forwards;
+    z-index: 45;
 }
 
 @keyframes fadeOut {

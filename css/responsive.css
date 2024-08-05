@@ -20,7 +20,7 @@
     }
 }
 
-@media (max-width: 990px) {
+@media (min-width: 767px) and (max-width: 990px) {
     .tooltip-container-linked, .tooltip-container-gmail, .tooltip-container-github {
         scale: 1;
     }

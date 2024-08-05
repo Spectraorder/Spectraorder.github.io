@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
         const baseScale = 1;
         const baseTranslateY = 100;
-    
+        
         let scale = baseScale;
         let translateY = baseTranslateY;
     
