@@ -2,19 +2,12 @@
     .my-name {
         font-size: 72px;
     }
-    .photo-container img {
+    /* .photo-container img {
         width: 350px;
-    }
-    .my-description {
-        right: 8%;
-        font-size: 24px;
-    }
+    } */
 }
 
 @media (min-width: 990px) and (max-width: 1275px) {
-    .my-description {
-        font-size: 20px;
-    }
     .tooltip-container-linked, .tooltip-container-gmail, .tooltip-container-github {
         scale: 1;
     }
@@ -47,11 +40,15 @@
         top: 125%;
         transform: translateX(-50%);
     }
+    .photo-container img {
+        width: 200px;
+    }
     .my-description {
         top: 150%;
         right: 50%;
         width: 60%;
         transform: translateX(50%);
+        font-size: 16px;
     }
     .tooltip-container-linked, .tooltip-container-gmail, .tooltip-container-github {
         scale: 1;
@@ -82,17 +79,11 @@
     .photo-container {
         top: 130%;
     }
-    .my-description {
-        top: 165%;
-    }
 }
 
 @media (max-height: 600px) and (max-width: 767px) {
     .photo-container {
         top: 160%;
-    }
-    .my-description {
-        top: 240%;
     }
     .tooltip-container-linked {
         top: 130%;

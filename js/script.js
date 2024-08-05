@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
+    var isTouchDevice = 'ontouchstart' in document.documentElement;
+
+    if (isTouchDevice) {
+        document.querySelector('.mouseCircle').style.display = 'none';
+    } else {
+        document.querySelector('.mouseCircle').style.display = 'block';
+    }
+
     const blurOverlay = document.querySelector('.blur-overlay');
     const sidebar = document.querySelector(".menu-sidebar");
     const cards = gsap.utils.toArray('.menu-card');

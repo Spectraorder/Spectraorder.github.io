@@ -43,7 +43,6 @@
     margin-top: 8px;
     margin-left: 12px;
     transition: transform 0.3s, color 0.3s;
-    /* transform: rotate(90deg); */
 }
 
 .overlay-toggle:hover {
@@ -78,6 +77,11 @@
     top: 0;
     left: 0;
     transform: translateY(100%);
+}
+
+.overlay-toggle svg {
+    width: 24px;
+    height: 24px;
 }
 
 .overlay-toggle.active .menu-text .menu-text {
