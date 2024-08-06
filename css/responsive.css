@@ -2,9 +2,6 @@
     .my-name {
         font-size: 72px;
     }
-    /* .photo-container img {
-        width: 350px;
-    } */
 }
 
 @media (min-width: 990px) and (max-width: 1275px) {
@@ -35,6 +32,12 @@
         animation: none !important;
         transform: translateY(0);
     }
+    .menu-sidebar {
+        width: 80vw;
+    }
+    .menu-card-title {
+        font-size: 6vw;
+    }
     .photo-container {
         left: 50%;
         top: 125%;
@@ -44,7 +47,7 @@
         width: 200px;
     }
     .my-description {
-        top: 150%;
+        top: 170%;
         right: 50%;
         width: 60%;
         transform: translateX(50%);
@@ -82,9 +85,6 @@
 }
 
 @media (max-height: 600px) and (max-width: 767px) {
-    .photo-container {
-        top: 160%;
-    }
     .tooltip-container-linked {
         top: 130%;
     }
