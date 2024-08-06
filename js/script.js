@@ -103,11 +103,60 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // Play the audio when the page loads
+    const audio = document.getElementById('background-music');
+    audio.volume = 0;
+
+    function playAudio() {
+        audio.play();
+        fadeInAudio();
+        startWaveAnimation();
+    }
+
+    function fadeInAudio() {
+        audio.volume = 0;
+        const fadeInInterval = setInterval(() => {
+            if (audio.volume < 0.5) {
+                audio.volume += 0.1;
+            } else {
+                clearInterval(fadeInInterval);
+            }
+        }, 100);
+    }
+
+    function fadeOutAudio() {
+        const fadeOutInterval = setInterval(() => {
+            if (audio.volume > 0.1) {
+                audio.volume -= 0.1;
+            } else {
+                clearInterval(fadeOutInterval);
+                audio.pause();
+                audio.volume = 0.5;
+            }
+        }, 100);
+    }
+
+    document.addEventListener('click', function playOnClick() {
+        playAudio();
+        document.removeEventListener('click', playOnClick);
+    });
+
+    // audio.addEventListener('play', startWaveAnimation);
+    // audio.addEventListener('pause', stopWaveAnimation);
+
+    audio.addEventListener('ended', function() {
+        audio.currentTime = 0;
+        audio.play();
+    });
+
     // Toggle the wave animation on volume-icon click
     document.querySelector('.volume-icon').addEventListener('click', () => {
         if (isAnimating) {
+            fadeOutAudio();
             stopWaveAnimation();
         } else {
+            audio.play();
+            fadeInAudio();
             startWaveAnimation();
         }
     });

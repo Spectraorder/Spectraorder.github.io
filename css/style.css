@@ -76,7 +76,7 @@ body.dark-mode {
 }
   
 .second-text {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
 }
 
 .my-name.animate .first-text {
@@ -101,7 +101,7 @@ body.dark-mode {
 
 @keyframes slide-down {
     from {
-        transform: translateY(-100%);
+        transform: translateY(-200%);
     }
     to {
         transform: translateY(0%);

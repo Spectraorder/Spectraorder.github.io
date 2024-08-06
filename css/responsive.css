@@ -2,6 +2,9 @@
     .my-name {
         font-size: 72px;
     }
+    .second-text {
+        font-size: 48px;
+    }
 }
 
 @media (min-width: 990px) and (max-width: 1275px) {
@@ -75,6 +78,12 @@
     }
     .tooltip-container-linked .icon:hover .layer, .tooltip-container-gmail .icon:hover .layer, .tooltip-container-github .icon:hover .layer {
         transform: none;
+    }
+    .scroll-to-explore {
+        font-size: 15px;
+    }
+    .alarm {
+        font-size: 15px;
     }
 }
 
