@@ -55,7 +55,7 @@ body.dark-mode {
     top: 105%;
     transform: translateX(-50%);
     font-weight: 600;
-    font-size: 32px;
+    font-size: 3vw;
     white-space: nowrap;
 }
 
@@ -125,7 +125,7 @@ body.dark-mode {
 
 .photo-container {
     position: absolute;
-    top: 135%;
+    top: 140%;
     left: 20%;
     z-index: -4;
 }

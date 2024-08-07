@@ -1,10 +1,10 @@
 @media (min-width: 1275px) {
-    .my-name {
+    /* .my-name {
         font-size: 72px;
     }
     .second-text {
         font-size: 48px;
-    }
+    } */
 }
 
 @media (min-width: 990px) and (max-width: 1275px) {
@@ -28,7 +28,8 @@
 @media (max-width: 767px) {
     .my-name {
         left: 50%;
-        transform: translateX(-50%)
+        transform: translateX(-50%);
+        font-size: 5vw;
     }
     .my-name.animate .first-text,
     .my-name.animate .second-text {
@@ -89,7 +90,7 @@
 
 @media (max-height: 834px) {
     .photo-container {
-        top: 130%;
+        top: 135%;
     }
 }
 

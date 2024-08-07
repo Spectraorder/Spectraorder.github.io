@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 clearInterval(fadeInInterval);
             }
-        }, 100);
+        }, 200);
     }
 
     function fadeOutAudio() {
@@ -131,9 +131,8 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 clearInterval(fadeOutInterval);
                 audio.pause();
-                audio.volume = 0.5;
             }
-        }, 100);
+        }, 200);
     }
 
     document.addEventListener('click', function playOnClick() {

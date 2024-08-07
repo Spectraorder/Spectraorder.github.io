@@ -5,13 +5,20 @@ path.style.strokeDasharray = pathLength + ' ' + pathLength;
 path.style.strokeDashoffset = pathLength;
 
 window.addEventListener('scroll', () =>{
-    // var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-    const ratio = (window.scrollY - 200) / 1800;
-    if(ratio<=1){
-        const scrollPercentage = easeInOutQuad(ratio);
-        var drawLength = pathLength * scrollPercentage;
-        path.style.strokeDashoffset = drawLength - pathLength;
-    }
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollStart = windowHeight / 2;
+    const scrollEnd = documentHeight - windowHeight;
+    const scrollPosition = window.scrollY;
+
+    // Calculate scroll ratio
+    let ratio = (scrollPosition - scrollStart) / (scrollEnd - scrollStart);
+    ratio = Math.max(0, Math.min(ratio, 1));
+
+    // Calculate scroll percentage using easing function
+    const scrollPercentage = easeInOutQuad(ratio);
+    const drawLength = pathLength * scrollPercentage;
+    path.style.strokeDashoffset = drawLength - pathLength;
     
 })
 
